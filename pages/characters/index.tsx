@@ -2,8 +2,8 @@ import React from 'react';
 import {API} from "../../assets/api/api";
 import {CharacterType, ResponseType} from "../../assets/api/rick-and-morty-api";
 import {PageWrapper} from "../../components/PageWrapper/PageWrapper";
-import {Header} from "../../components/Header/Header";
 import {CharacterCard} from "../../components/Card/CharacterCard/CharacterCard";
+import {getLayout} from "../../components/Layout/BaseLayout/BaseLayout";
 
 export const getStaticProps = async () => {
     const characters = await API.rickAndMorty.getCharacters()
@@ -21,9 +21,9 @@ const Characters = ({characters}: Props) => {
         <CharacterCard character={el} key={el.id}/>)
     return (
         <PageWrapper>
-            <Header/>
             {characterList}
         </PageWrapper>
     );
 };
+Characters.getLayout = getLayout
 export default Characters;
