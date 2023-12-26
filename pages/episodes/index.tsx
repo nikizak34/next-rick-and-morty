@@ -1,9 +1,9 @@
 import React from 'react';
-import {API} from "../../assets/api/api";
-import {EpisodeType, ResponseType} from "../../assets/api/rick-and-morty-api";
-import {PageWrapper} from "../../components/PageWrapper/PageWrapper";
-import {Card} from "../../components/Card/Card";
-import {getLayout} from "../../components/Layout/BaseLayout/BaseLayout";
+import {API} from "assets/api/api";
+import {EpisodeType, ResponseType} from "assets/api/rick-and-morty-api";
+import {PageWrapper} from "components/PageWrapper/PageWrapper";
+import {Card} from "components/Card/Card";
+import {getLayout} from "components/Layout/BaseLayout/BaseLayout";
 
 export const getServerSideProps = async () => {
     const episodes = await API.rickAndMorty.getEpisodes()
