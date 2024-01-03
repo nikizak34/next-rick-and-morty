@@ -23,7 +23,6 @@ export const CharacterCard = (props: PropsType) => {
     return (
         <Card name={name}>
             <Status status={status} src={statusImages[status]} />
-            {/*<Image src={aliveStatus} alt={''} width={20} height={20}/>*/}
             <Link href={`/characters/${id}`}>
                 <ImageBlock src={image} alt={name} width={300} height={300} priority/>
             </Link>
